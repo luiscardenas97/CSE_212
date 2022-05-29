@@ -37,7 +37,7 @@ class Translator:
 
         my_translator.add_word("book","buch")
         """
-        self.words[from_word] = to_word    
+        self.words[from_word] = to_word         #It adds an element to the dictionary. It uses from_word as key and to_word as value.
 
     def translate(self, from_word):
         """
@@ -47,10 +47,10 @@ class Translator:
 
         german_word = my_translator.translate("book")
         """
-        if from_word in self.words:
-            return self.words[from_word]
+        if from_word in self.words:             #It checks if from_word is one key in the dictionary
+            return self.words[from_word]        #If it's a key, it returns the value from that key
         else:
-            return "???"
+            return "???"                        #If it's not a key, it returns the string "???"
 
 # Sample Test Cases (may not be comprehensive) 
 print("\n=========== PROBLEM 1 TESTS ===========")
@@ -78,13 +78,13 @@ def summarize_degrees(filename):
     """
     degrees = dict()
     with open(filename) as file_in:
-        for line in file_in:
-            fields = line.split(",") 
+        for line in file_in:                    #It loops through each line of the text file.
+            fields = line.split(",")            #It splits the line into elements separated by the comma and make a list with them
 
-            if fields[3] not in degrees:
-                degrees[fields[3]] = 1
+            if fields[3] not in degrees:        #It checks if the element in index 3 is in the degrees dictionary
+                degrees[fields[3]] = 1          #If it isn't, it adds an element in the dictionary. It uses the element in index 3 as key and assign 1 as value
             else:
-                degrees[fields[3]] += 1
+                degrees[fields[3]] += 1         #If it's, it uses the element in index 3 as key and add 1 to the value previously saved in that key
 
     return degrees
 
@@ -120,34 +120,33 @@ def is_anagram(word1, word2):
     Reminder: You can access a letter by index in a Python string by 
     using the [] notation.
     """
-    anagram1 = dict()
-    anagram2 = dict()
-    x = word1.replace(" ", "").lower()
-    y = word2.replace(" ", "").lower()
+    anagram1 = dict()                       #It creates dictionary for word1
+    anagram2 = dict()                       #It creates dictionary for word2    
+    x = word1.replace(" ", "").lower()      #It gets rid of whitespace and make all the letter lower case in word1. It stores the resulting string in x
+    y = word2.replace(" ", "").lower()      #It gets rid of whitespace and make all the letter lower case in word2. It stores the resulting string in y
 
-    if len(x) != len(y):
-        return False
+    if len(x) != len(y):                    #It checks if the lengths of the string x and y are the same
+        return False                        #If they are not, it returns False
     
-    for letter in x:
-        if letter not in anagram1:
-            anagram1[letter] = 1
+    for letter in x:                        #It loops through each letter in x
+        if letter not in anagram1:          #It checks if the letter is in the dictionary for word1
+            anagram1[letter] = 1            #If it isn't, it adds an element in the dictionary. It uses the letter as key and assigns 1 as value.
         else:
-            anagram1[letter] += 1
+            anagram1[letter] += 1           #If it's, it uses the letter as key and add 1 to the value previously saved  in that key.
     
-    for letter in y:
-        if letter not in anagram2:
-            anagram2[letter] = 1
+    for letter in y:                        #It loops through each letter in y
+        if letter not in anagram2:          #It checks if the letter is in the dictionary for word2
+            anagram2[letter] = 1            #If it isn't, it adds an element in the dictionary. It uses the letter as key and assigns 1 as value.
         else:
-            anagram2[letter] += 1
+            anagram2[letter] += 1           #If it's, it uses the letter as key and add 1 to the value previously saved  in that key.
     
-    for z in anagram1:
-        if z in anagram2:
-            if anagram1[z] != anagram2[z]:
-                
-                return False
+    for z in anagram1:                      #It loops through each key from the dictionary of word1
+        if z in anagram2:                   #It checks if the key of word1's dictionary is in word2's dictionary
+            if anagram1[z] != anagram2[z]:  #It checks if the values in the key in both dictionaries are not equal
+                return False                #If they are not equal, it returns false
         else:
-            return False
-    return True
+            return False                    #If the key of word1's dictionary is not in word2's dictionary, it returns false
+    return True                             #If no conditions are satisfied, it returns true
 
 
 
@@ -192,8 +191,8 @@ class Maze:
         Initialize the map.  We assume that (1,1) is a valid location in
         the maze.
         """
-        self.maze_map = maze_map
-        self.curr_x = 1
+        self.maze_map = maze_map                #It receives the dictionary and store it in self.maze_map
+        self.curr_x = 1                         #It initializes the values for x and y
         self.curr_y = 1
 
     def move_left(self):
@@ -201,47 +200,47 @@ class Maze:
         Check to see if you can move left.  If you can, then move.  If you
         can't move, then display "Can't go that way!"
         """
-        movement = self.maze_map[(self.curr_x,self.curr_y)]
-        if movement[0]:
-            self.curr_x -= 1
-        else:
-            print("Can't go that way!")
+        movement = self.maze_map[(self.curr_x,self.curr_y)]     #It gets the value in the key (x,y) and store it in movement
+        if movement[0]:                                         #It checks if the element zero (left) in movement is true
+            self.curr_x -= 1                                    #If it's, it subtracts one from x
+        else:                                           
+            print("Can't go that way!")                         #If it isn't, it prints error message
 
     def move_right(self):
         """
         Check to see if you can move right.  If you can, then move.  If you
         can't move, then display "Can't go that way!"
         """        
-        movement = self.maze_map[(self.curr_x,self.curr_y)]
-        if movement[1]:
-            self.curr_x += 1
+        movement = self.maze_map[(self.curr_x,self.curr_y)]     #It gets the value in the key (x,y) and store it in movement
+        if movement[1]:                                         #It checks if the element one (right) in movement is true
+            self.curr_x += 1                                    #If it's, it adds one to x
         else:
-            print("Can't go that way!")
+            print("Can't go that way!")                         #If it isn't, it prints error message
 
     def move_up(self):
         """
         Check to see if you can move up.  If you can, then move.  If you
         can't move, then display "Can't go that way!"
         """
-        movement = self.maze_map[(self.curr_x,self.curr_y)]
-        if movement[2]:
-            self.curr_y -= 1
+        movement = self.maze_map[(self.curr_x,self.curr_y)]     #It gets the value in the key (x,y) and store it in movement
+        if movement[2]:                                         #It checks if the element two (up) in movement is true
+            self.curr_y -= 1                                    #If it's, it subtracts one from y
         else:
-            print("Can't go that way!")
+            print("Can't go that way!")                         #If it isn't, it prints error message
 
     def move_down(self):
         """
         Check to see if you can move down.  If you can, then move.  If you
         can't move, then display "Can't go that way!"
         """
-        movement = self.maze_map[(self.curr_x,self.curr_y)]
-        if movement[3]:
-            self.curr_y += 1
+        movement = self.maze_map[(self.curr_x,self.curr_y)]     #It gets the value in the key (x,y) and store it in movement
+        if movement[3]:                                         #It checks if the element three (down) in movement is true
+            self.curr_y += 1                                    #If it's, it adds one to y
         else:
-            print("Can't go that way!")
+            print("Can't go that way!")                         #If it isn't, it prints error message
     
     def show_status(self):
-        print("Current location (x={} , y={})".format(self.curr_x, self.curr_y))
+        print("Current location (x={} , y={})".format(self.curr_x, self.curr_y))    #It prints current location
 
 # Sample Test Cases (may not be comprehensive) 
 map =  {(1,1) : (False, True, False, True),
@@ -332,10 +331,10 @@ def earthquake_daily_summary():
     req = requests.get("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson")
     data = req.json() # The .json() function will convert the json data from the server to a dictionary
 
-    for earthquake in data["features"]:
-        place = earthquake["properties"]['place']
-        magnitude = str(earthquake["properties"]['mag'])
-        print(place + ' - Mag ' + magnitude)
+    for earthquake in data["features"]:                         #It loops through the dictionary with key "features" that is inside the main dictionary
+        place = earthquake["properties"]['place']               #Inside features, there is another dictionary with key "properties". It stores the value from key "place" inside that dictionary
+        magnitude = str(earthquake["properties"]['mag'])        #Inside features, there is another dictionary with key "properties". It stores the value from key "mag" inside that dictionary
+        print(place + ' - Mag ' + magnitude)                    #It prints the location of the earthquake and the magnitude
 
 # Sample Test Cases (may not be comprehensive) 
 print("\n=========== PROBLEM 5 TESTS ===========")
