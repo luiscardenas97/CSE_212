@@ -124,7 +124,6 @@ def is_anagram(word1, word2):
     anagram2 = dict()
     x = word1.replace(" ", "").lower()
     y = word2.replace(" ", "").lower()
-    check = True
 
     if len(x) != len(y):
         return False
@@ -144,12 +143,11 @@ def is_anagram(word1, word2):
     for z in anagram1:
         if z in anagram2:
             if anagram1[z] != anagram2[z]:
-                check = False
-                return check
+                
+                return False
         else:
-            check = False
-            return check
-    return check
+            return False
+    return True
 
 
 
