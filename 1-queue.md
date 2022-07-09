@@ -6,7 +6,7 @@ In order to understand the structure of a queue, we can consider the following e
 <br> 
 Imagine that there are several people in line at a bank ready to be served. The person who joined the line the earliest is called the **front**, and the person who joined the line the last is called the **back**. When the person at the front of the line is served, and therefore removed from the queue, we call this operation **dequeue**. When a new person arrives at the bank and lines up, we call this operation **enqueue**.
 <br> 
-![Figure 1](C:\Git\CSE_212\Queue.png)
+![Figure 1](Queue.png)
 <br> 
 A queue is fairly simple data structure, but it can be a powerful tool when using adequately.
 
