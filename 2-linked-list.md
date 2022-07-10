@@ -48,6 +48,8 @@ def __init__(self, data):
 
 ```
 
+<br> 
+
 ### Insert a new node in the head: 
 ```
 # Connect the "next" of the new node to the current head
@@ -66,6 +68,8 @@ if self.head is None:
     self.tail = new_node
 ```
 
+<br> 
+
 ### Insert a new node in the tail: 
 ```
 # Connect the "prev" of the new node to the current tail
@@ -77,6 +81,9 @@ self.head.prev = new_node
 # Update the tail to point to the new node
 self.head = new_node
 ```
+
+<br> 
+
 ### Insert a new node in the middle: 
 ```
 # Connect the "prev" of the new node to the current node
@@ -91,6 +98,8 @@ current.next.prev = new_node
 # Connect the "next" of the current node to the new node
 current.next = new_node
 ```
+
+<br> 
 
 Removing a node from a linked list can also be done at the head, tail and middle.
 ### Remove a node from the head: 
@@ -107,6 +116,9 @@ self.head = None
 self.tail = None
 
 ```
+
+<br> 
+
 ### Remove a node from the tail: 
 ```
 # Set the "next" of the node previous to the current tail to None
@@ -116,6 +128,8 @@ self.tail.prev.next = Node
 self.tail = self.tail.prev
 ```
 
+<br> 
+
 ### Remove a node from the middle: 
 ```
 # Connect the "prev" of the node after current to the node before current
@@ -124,9 +138,44 @@ current.next.prev = current.prev
 # Connect the "next" of the node before current to the node after current
 current.prev.next = current.next
 ```
-Whenever we want to access to data 
+
+<br> 
+
+Whenever we want to access to data in the list, we need to traverse the list starting by the head or the tail. This can be done by using a while loop and following the "next" or "prev" linked node until we get to the value we are trying to find or the end of the list.
+
+### Access a node from the linked list: 
+```
+# Check if an specific value is in the list
+def find_value(self, value):
+
+    # Whenever we want to start at the head
+    current = self.head
+
+    # Loop as long as we haven't reach the value we want
+    while current is not value:
+        
+        # Point to the next node
+        current = current.next
+
+    # Print the value once it's found
+    print(current.data)
+```
+If we want to loop through the list starting at the tail we just need to change the lines of code  `current = self.head` to `current = self.tail` and `current = current.next` to `current = current.prev`.
+
+<br> 
 
 ## Python Syntax
+Besides the methods previously mentioned for the implementation of the linked list, Python also has a built-in linked list already. The commands to use this linked list are the following:
+
+* >``` linked_list = deque() ```: It creates a empty linked list
+* >``` linked_list.appendleft(value) ```: It inserts a new head
+* >``` linked_list.append(value) ```: It inserts a new tail
+* >``` linked_list.insert(i, value) ```: It inserts a new value after the node "i"
+* >``` data = linked_list.popleft() ```: It removes the head and stores it in a variable
+* >``` data = linked_list.pop() ```: It removes the tail and stores it in a variable
+* >``` del linked_list[i] ```: It removes a value in the middle of the list
+* >``` length = len(list) ```: It returns the size of the linked list
+* >``` if len(list) = 0 ```: It checks if the linked list is empty. If it's, it returns true
 
 ## Example
 
