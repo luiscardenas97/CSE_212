@@ -1,6 +1,8 @@
 # Linked Lists
 Sometimes when creating an array, it's hard to know how many items we will include in our array or the right order in which we want to insert the items since the beginning of our project. In such situations, it's very common change our mind or make mistakes and we want to have an easy way to add or delete elements that are not necessary in the beginning or the end of our array. Maybe we want to do it in the middle of our arrangement. If this is our thinking, not many data structures give us this flexibility to easily add elements into our array. However, **Linked lists** allows us to collect data and stored it in memory in a random way. This data structure guarantees us that each element in the list will be stored in some place in memory but not each element will necessarily located in the address next to another element. To understand how it's possible that this data structure keep all the items in the list together, you can read the next section. 
 
+<br> 
+
 ## Structure
 There are two possible structure a linked list can have. The first type is shown in Figure 1. For this one, each element, also referred as **node**, has an associated **value** and a **pointer** to the address in memory of the **next node** in the list. Usually, the first element in the linked list is called **head**.
 
@@ -21,8 +23,108 @@ The second structure that a linked list can have is shown in Figure 2. This one 
 
 A powerful property this data structure has is the ability to traverse through the list until we get to the node we want to use for a certain operation. In order to this, it's necessary to know where the head or tail are; that way, we can traverse or reverse traverse until we get to the specific pot where we want to add a new node or remove a node.
 
-## How to Insert, Remove and Access Data From a Linked List
+<br> 
 
+## How to Insert, Remove and Access Data From a Linked List
+The three main operations that can be performed with liked lists are inserting data, removing data and accessing to the data in the list. We will first focus on inserting data to a linked list. 
+
+Inserting a new node in a linked list can be done at the head, tail or middle. Due to that pointers allows us to connect a new node to the next or previous node, the size of the list is not a problem when using this data structure. The processes of inserting at head and tail are very similar. Inserting in the middle can differ from the other two slightly.
+
+### Create a linked list and a new node:
+```
+# Linked lists can be implemented in Python by using classes. 
+# In case we want to initialize an empty list, we can do it inside the __init__() method declaration of the class.
+
+def __init__(self):
+    self.head = None
+    self.tail = None
+
+#A new node can be created as an atribute inside a class within the other class
+
+def __init__(self, data):
+    self.data = data
+    self.next = None
+    self.prev = None
+
+```
+
+### Insert a new node in the head: 
+```
+# Connect the "next" of the new node to the current head
+new_node.next = self.head 
+
+# Connect the "prev" of the current head to the new node
+self.head.prev = new_node
+
+# Update the head to point to the new node
+self.head = new_node
+
+# SPECIAL CASE
+# If linked list is empty, we could just set the head and tail to the new node
+if self.head is None:
+    self.head = new_node
+    self.tail = new_node
+```
+
+### Insert a new node in the tail: 
+```
+# Connect the "prev" of the new node to the current tail
+new_node.prev = self.tail 
+
+# Connect the "next" of the current tail to the new node
+self.head.prev = new_node
+
+# Update the tail to point to the new node
+self.head = new_node
+```
+### Insert a new node in the middle: 
+```
+# Connect the "prev" of the new node to the current node
+new_node.prev = current 
+
+# Connect the "next" of the new node to the next node after current node
+new_node.next = current.next
+
+# Connect the "prev" of the next node after current to the new node
+current.next.prev = new_node
+
+# Connect the "next" of the current node to the new node
+current.next = new_node
+```
+
+Removing a node from a linked list can also be done at the head, tail and middle.
+### Remove a node from the head: 
+```
+# Set the "prev" of the node next to the current head to None
+self.head.next.prev = Node
+
+# Update the head to point to the node next to the current head
+self.head = self.head.next
+
+# SPECIAL CASE
+# If only one node in the list, set the head and tail to None
+self.head = None
+self.tail = None
+
+```
+### Remove a node from the tail: 
+```
+# Set the "next" of the node previous to the current tail to None
+self.tail.prev.next = Node
+
+# Update the tail to point to the node previous to the current tail
+self.tail = self.tail.prev
+```
+
+### Remove a node from the middle: 
+```
+# Connect the "prev" of the node after current to the node before current
+current.next.prev = current.prev
+
+# Connect the "next" of the node before current to the node after current
+current.prev.next = current.next
+```
+Whenever we want to access to data 
 
 ## Python Syntax
 
