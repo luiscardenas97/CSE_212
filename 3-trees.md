@@ -78,14 +78,14 @@ In case you are interested in learning a bit more about how these BSTs work, the
 
 <br>
 
-## How to Insert, Traverse and Access Data From a Tree
+## How to Insert and Access Data From a Tree
 
 Once we introduced these topics, we can now talk about how to insert, traverse and access to data from this data structure by using Python. Operations with BST results more complicated than with the other data structures due to Python does not a have a built-in BST class. Therefore, whoever wants to use this data structure needs to come out with their own class to perform these operations. In order to create a BST class, we need to implement recursion, so we need to take into the account the principles of base case and smaller problem. These principles allow us to stop the recursion whenever we reach the base case and reduce the our problem with every recursion.
 
 <br>
 
 ### Create a BST and insert a new node in it
-As mentioned before, a BST can be implemented with classes. We can create a class which contains this data structure with an inner class that holds the node information. This inner class can carry the node value and two pointers, one that points to the left node and another one that points to the right node. The upper class can also contain a attribute to create an empty BST. Within this upper class, we can create a method that can allow the user to insert new nodes to the BST. This method would initially check if the root node is empty, and if it's, it would add the new input value as the root. Within this method, we can called another method that will check for all the other cases and use recursion until it finds the right spot to insert the new node. The following code shows how to implement this operation:
+As mentioned before, a BST can be implemented with classes. We can create a class which contains this data structure with an inner class that holds the node information. This inner class can carry the node value and two pointers, one that points to the left node and another one that points to the right node. The upper class can also contain a attribute to create an empty BST. Within this upper class, we can create a function that can allow the user to insert new nodes to the BST. This function would initially check if the root node is empty, and if it's, it would add the new input value as the root. Within this function, we can called another function that will check for all the other cases and use recursion until it finds the right spot to insert the new node. The following code shows how to implement this operation:
 
 <br>
 
@@ -105,25 +105,30 @@ class BST:                         #Initialize a BST
         #If the root is empty, data becomes the BST root
         if self.root is Node:
             self.root = BST.Node(data)  
+            
         else:
         #Otherwise call other method to deal with other cases
-        self._insert(data, self.root)
+            self._insert(data, self.root)
 
     def _insert(self, data, node):
         #Go to the left whenever data is less than current node
+
         if data < node.data:
             #If node to the left is empty, initilize a new node
             if node.left is None:
                 node.left = BST.Node(data)
+
             #Otherwise, use recursion to go to left node
             else:
                 self._insert(data, node.left)
 
         #Go to the right whenever data is less than current node
         elif data >= node.data:
+
             #If node to the right is empty, initilize a new node
             if node.right is Node:
                 node.right = BST.Node(data)
+
             #Otherwise, use recursion to go to right node
             else:
                 self._insert(data, node.right)
@@ -132,7 +137,27 @@ class BST:                         #Initialize a BST
 
 <br>
 
+### Accesing data from a BST
+Whenever we want to access data from a BST we need to traverse all the nodes from the smallest to the largest or vice versa just like we did with linked lists. Doing so would allow us to implement a for loop to visit each node in the BST in case we want to do something with them. Before we show the code to do this, we need to explain some things about the methods and commands we will use to implement this operation. First, we would need to create a generator function. This type of functions are built-in methods from Python and allow the user to iterate through a collection of data and return values from the collection one at the time. These functions are also called iterators. `__iter__()` is the iterator we will use to traverse the BST. In addition to this, we will use a special command called `yield`. This command is similar to the `return` command except that instead of stoping the execution of the function, it only pauses the execution; it returns the value, and then the function resumes its program where it left off, maintaining the integrity of its local variables. The command `yield from` allows a function called within our `__iter()__` function to return its result. Having explained these things, we are ready to analyze the piece of code that makes this possible:
 
+```python
+# This declare our generator function. Allow to perform a for loop
+def __iter__(self):
+    yield from self._traverse_forward(self.root)
+
+def _traverse_forward(self, node):
+    # Check if the current node spot is not empty
+    if node is not None:
+
+        # Traverse the smaller numbers first
+        yield from self._traverse_forward(node.left)
+
+        # Return data from the current node
+        yield node.data
+
+        #Traverse the larger number last
+        yield from self._traverse_forward(node.right)
+```
 
 ## Python Syntax
 
