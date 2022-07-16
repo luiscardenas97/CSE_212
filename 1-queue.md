@@ -12,6 +12,8 @@ Imagine that there are several people in line at a bank ready to be served. The 
 <br> 
 A queue is fairly simple data structure, but it can be a powerful tool when using adequately.
 
+<br> 
+
 ## Reading From and Writing to a Queue
 Whenever we want to read from a queue, we can implement a line of code like this:
 
@@ -42,6 +44,7 @@ list.append(item)
 ```
 This would allow us to enqueue a new value to the back of the queue.
 
+<br> 
 
 ## Python Syntax
 As we could see in the previous section, a queue can be implemented on Python by using a list. 
