@@ -4,19 +4,19 @@ Sometimes when creating an array, it's hard to know how many items we will inclu
 <br> 
 
 ## Structure
-There are two possible structure a linked list can have. The first type is shown in Figure 1. For this one, each element, also referred as **node**, has an associated **value** and a **pointer** to the address in memory of the **next node** in the list. Usually, the first element in the linked list is called **head**.
+There are two possible structure a linked list can have. The first type is shown in Figure 2. For this one, each element, also referred as **node**, has an associated **value** and a **pointer** to the address in memory of the **next node** in the list. Usually, the first element in the linked list is called **head**.
 
 <br> 
 
-![Figure 1](Linked_List.png)
+![Figure 2](Linked_List.png)
 <figcaption align = "center"><b>Figure 2 - Linked List</b></figcaption>
 
 <br> 
 
-The second structure that a linked list can have is shown in Figure 2. This one is generally called **doubly-linked list** due to its bi-directional linking property. As you can see in the figure, this arrangement not only has a head but also has a **tail** which is the last element in the list. It additionally counts with pointers to both the address in memory of the next node and **previous node**.
+The second structure that a linked list can have is shown in Figure 3. This one is generally called **doubly-linked list** due to its bi-directional linking property. As you can see in the figure, this arrangement not only has a head but also has a **tail** which is the last element in the list. It additionally counts with pointers to both the address in memory of the next node and **previous node**.
 
 
-![Figure 1](Doubly-Linked_List.png)
+![Figure 3](Doubly-Linked_List.png)
 <figcaption align = "center"><b>Figure 3 - Doubly-Linked List</b></figcaption>
 
 <br> 
