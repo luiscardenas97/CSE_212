@@ -105,7 +105,7 @@ class BST:                         #Initialize a BST
         #If the root is empty, data becomes the BST root
         if self.root is Node:
             self.root = BST.Node(data)  
-            
+
         else:
         #Otherwise call other method to deal with other cases
             self._insert(data, self.root)
@@ -158,8 +158,7 @@ def _traverse_forward(self, node):
         #Traverse the larger number last
         yield from self._traverse_forward(node.right)
 ```
-
-## Python Syntax
+These are only two of all the possible operations that can be performed with BST (remove, contain, height, size, empty, etc.). However, as Python does not have a built-in class to implement a BST, for all the other operations the user need to come out with their own class and code to implement them. For that same reason, we don't have the Python syntax section for BST. 
 
 ## Example
 
