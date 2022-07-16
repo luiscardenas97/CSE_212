@@ -68,11 +68,68 @@ Finally, we want to introduce the type of tree structure called **balanced binar
 
 <br>
 
-https://www.cs.usfca.edu/~galles/visualization/BST.html
-https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
-https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
+In case you are interested in learning a bit more about how these BSTs work, the University of San Francisco developed some free programs to visualize the operation of these BSTs. Those programs can be found on these following links: 
+
+[Binary Search Tree](https://www.cs.usfca.edu/~galles/visualization/BST.html)
+
+[AVL Balanced BST](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)
+
+[Red Black Balanced BST](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html)
+
+<br>
 
 ## How to Insert, Traverse and Access Data From a Tree
+
+Once we introduced these topics, we can now talk about how to insert, traverse and access to data from this data structure by using Python. Operations with BST results more complicated than with the other data structures due to Python does not a have a built-in BST class. Therefore, whoever wants to use this data structure needs to come out with their own class to perform these operations. In order to create a BST class, we need to implement recursion, so we need to take into the account the principles of base case and smaller problem. These principles allow us to stop the recursion whenever we reach the base case and reduce the our problem with every recursion.
+
+<br>
+
+### Insert a new node in a BST
+As mentioned before, a BST can be implemented with classes. We can create a class which contains this data structure with an inner class that holds the node information. This inner class can carry the node value and two pointers, one that points to the left node and another one that points to the right node. The upper class can also contain a attribute to create an empty BST. Within this upper class, we can create a method that can allow the user to insert new nodes to the BST. This method would initially check if the root node is empty, and if it's, it would add the new input value as the root. Within this method, we can called another method that will check for all the other cases and use recursion until it finds the right spot to insert the new node. The following code shows how to implement this operation:
+```
+class BST:                         #Initialize a BST
+    class Node:
+        def __init__(self, data):  #Initialize a new node
+            self.data = data
+            self.left = None
+            self.right = None
+    
+    def __init__(self):
+        self.root = None            #Create a empty BST
+    
+    def insert(self, data):
+
+        #If the root is empty, data becomes the BST root
+        if self.root is Node:
+            self.root = BST.Node(data)  
+        else:
+        #Otherwise call other method to deal with other cases
+        self._insert(data, self.root)
+
+    def _insert(self, data, node):
+        #Go to the left whenever data is less than current node
+        if data < node.data:
+            #If node to the left is empty, initilize a new node
+            if node.left is None:
+                node.left = BST.Node(data)
+            #Otherwise, use recursion to go to left node
+            else:
+                self._insert(data, node.left)
+
+        #Go to the right whenever data is less than current node
+        elif data >= node.data:
+            #If node to the right is empty, initilize a new node
+            if node.right is Node:
+                node.right = BST.Node(data)
+            #Otherwise, use recursion to go to right node
+            else:
+                self._insert(data, node.right)
+        
+```
+
+<br>
+
+
 
 ## Python Syntax
 
