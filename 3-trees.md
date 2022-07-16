@@ -22,7 +22,7 @@ A binary tree can also be classified into two other categories, a full binary tr
 
 <br>
 
-The second tree structure type we will introduce is the **binary search tree (BST)**. This one has more restrictions than the one introduced previously. In a BST type of structure, data that is smaller than the parent node, starting at the root, is stored as a subtree in the left side, and data that is larger is stored as a subtree in the right side. Whenever we have data that is repeated, it can be added either to the right or left. BSTs are very efficient when it comes to searching for data because of its O(log n) performance. A O(log n) is a big O notation assigned to programs or data structures that have the performance of a base 2 logarithmic function. In other words, algorithms that are able to reduce the number of operations required to perform to the half each iteration. This is a property that allows the users to reduce the job by 50% at each level whene trying to find an empty spot to add data in a BST. The Figure 6 and 7 show a BST and its typical operation.
+The second type of tree structure we will introduce is the **binary search tree (BST)**. This one has more restrictions than the one introduced previously. In a BST type of structure, data that is smaller than the parent node, starting at the root, is stored as a subtree in the left side, and data that is larger is stored as a subtree in the right side. Whenever we have data that is repeated, it can be added either to the right or left. BSTs are very efficient when it comes to searching for data because of its O(log n) performance. A O(log n) is a big O notation assigned to programs or data structures that have the performance of a base 2 logarithmic function. In other words, algorithms that are able to reduce the number of operations required to perform to the half each iteration. This is a property that allows the users to reduce the job by 50% at each level whene trying to find an empty spot to add data in a BST. The Figure 6 and 7 show a BST and its typical operation.
 
 <br>
 
@@ -37,6 +37,40 @@ The second tree structure type we will introduce is the **binary search tree (BS
 <figcaption align = "center"><b>Figure 7 - BST Typical Operation </b></figcaption>
 
 <br>
+
+Finally, we want to introduce the type of tree structure called **balanced binary search tree (balance BST)**. This arrangement is based on a normal BST, except that includes some additional restrictions in order to keep our O(log n) performance. Something that could diminish this efficiency would be having a considerable height difference between two subtrees. Balance BST algorithms are able to detect such differences and correct them. **AVL** and **Red Black trees** are self-balance BST that implement some of these algorithms. AVL trees don't allow a height difference greater than one between any of its subtrees nodes. With Red Black trees, each node carries an extra bit to keep track of its color, red or black. The root node and leaf nodes can only be black, and whenever there is a red node, both of its children must be black. Every path should include the same number of black nodes. For both BST, the algorithm rotates the nodes to follow these rules. Following these rules prevents them from losing their O(log n) performance. The following figures show both types of balanced BST and their respective operation.
+
+<br>
+
+![Figure 8](AVL_BBST.png)
+<figcaption align = "center"><b>Figure 8 - AVL Balanced BST </b></figcaption>
+
+<br>
+
+<br>
+
+![Figure 9](AVL_BBST_performance.png)
+<figcaption align = "center"><b>Figure 9 - AVL Balanced BST Typical Operation </b></figcaption>
+
+<br>
+
+<br>
+
+![Figure 10](Red_Black_BBST.png)
+<figcaption align = "center"><b>Figure 10 - Red Black Balanced BST  </b></figcaption>
+
+<br>
+
+<br>
+
+![Figure 11](Red_Black_BBST_performance.png)
+<figcaption align = "center"><b>Figure 11 - Red Black Balanced BST Typical Operation </b></figcaption>
+
+<br>
+
+https://www.cs.usfca.edu/~galles/visualization/BST.html
+https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
+https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
 
 ## How to Insert, Traverse and Access Data From a Tree
 

@@ -1,6 +1,6 @@
 # Python Data Structure Tutorial
 
-Welcome to the Python Data Structure Tutorial. The following links provide descriptions and instructions in how to use those data structure:
+Welcome to the Python Data Structure Tutorial. The following links provide descriptions and instructions in how to use these data structure:
 
 * [Queues](1-queue.md)
 * [Linked Lists](2-linked-list.md)
