@@ -84,7 +84,7 @@ Once we introduced these topics, we can now talk about how to insert, traverse a
 
 <br>
 
-### Insert a new node in a BST
+### Create a BST and insert a new node in it
 As mentioned before, a BST can be implemented with classes. We can create a class which contains this data structure with an inner class that holds the node information. This inner class can carry the node value and two pointers, one that points to the left node and another one that points to the right node. The upper class can also contain a attribute to create an empty BST. Within this upper class, we can create a method that can allow the user to insert new nodes to the BST. This method would initially check if the root node is empty, and if it's, it would add the new input value as the root. Within this method, we can called another method that will check for all the other cases and use recursion until it finds the right spot to insert the new node. The following code shows how to implement this operation:
 
 <br>

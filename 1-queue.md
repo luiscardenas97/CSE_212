@@ -19,7 +19,7 @@ Whenever we want to read from a queue, we can implement a line of code like this
 
 <br> 
 
-```
+```python
 #This line of code deletes the item in the front of the queue and store it in a variable
 
 data = list.pop(0)
@@ -36,7 +36,7 @@ This would allow us to dequeue the front value and store it in a variable. Once 
 <br> 
 Whenever we want to write to a queue, we can implement the following line of code: 
 
-```
+```python
 #This line of code appends a new item to the back of the queue
 
 list.append(item)

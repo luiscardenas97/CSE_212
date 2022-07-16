@@ -31,7 +31,7 @@ The three main operations that can be performed with liked lists are inserting d
 Inserting a new node in a linked list can be done at the head, tail or middle. Due to that pointers allows us to connect a new node to the next or previous node, the size of the list is not a problem when using this data structure. The processes of inserting at head and tail are very similar. Inserting in the middle can differ from the other two slightly.
 
 ### Create a linked list and a new node:
-```
+```python
 # Linked lists can be implemented in Python by using classes. 
 # In case we want to initialize an empty list, we can do it inside the __init__() method declaration of the class.
 
@@ -51,7 +51,7 @@ def __init__(self, data):
 <br> 
 
 ### Insert a new node in the head: 
-```
+```python
 # Connect the "next" of the new node to the current head
 new_node.next = self.head 
 
@@ -71,7 +71,7 @@ if self.head is None:
 <br> 
 
 ### Insert a new node in the tail: 
-```
+```python
 # Connect the "prev" of the new node to the current tail
 new_node.prev = self.tail 
 
@@ -85,7 +85,7 @@ self.head = new_node
 <br> 
 
 ### Insert a new node in the middle: 
-```
+```python
 # Connect the "prev" of the new node to the current node
 new_node.prev = current 
 
@@ -103,7 +103,7 @@ current.next = new_node
 
 Removing a node from a linked list can also be done at the head, tail and middle.
 ### Remove a node from the head: 
-```
+```python
 # Set the "prev" of the node next to the current head to None
 self.head.next.prev = Node
 
@@ -120,7 +120,7 @@ self.tail = None
 <br> 
 
 ### Remove a node from the tail: 
-```
+```python
 # Set the "next" of the node previous to the current tail to None
 self.tail.prev.next = Node
 
@@ -131,7 +131,7 @@ self.tail = self.tail.prev
 <br> 
 
 ### Remove a node from the middle: 
-```
+```python
 # Connect the "prev" of the node after current to the node before current
 current.next.prev = current.prev
 
@@ -144,7 +144,7 @@ current.prev.next = current.next
 Whenever we want to access to data in the list, we need to traverse the list starting by the head or the tail. This can be done by using a while loop and following the "next" or "prev" linked node until we get to the value we are trying to find or the end of the list.
 
 ### Access a node from the linked list: 
-```
+```python
 # Check if an specific value is in the list
 def find_value(self, value):
 
