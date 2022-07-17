@@ -106,7 +106,7 @@ while exit_menu == "no":
         while list_of_orders.len() != 0:
             served_print = list_of_orders.dequeue()
 
-            for x in range(30000000):      #Simulate a clock for the printing time
+            for x in range(30000000):      #Simulate a clock for the print time
                 pass
 
             print(f'>>>The file called "{served_print}" was already printed')
