@@ -116,6 +116,18 @@ while exit_menu == "no":
     
     print()
 ```
-## Problem to Solve
+## Problem to Solve: Music Playlist Creator Software
+Write a program that implement a queue to create a songs playlist with a maximum of 20 songs. This should allow the user to add new songs to the playlist and dequeue songs that were already played. Consider the duration of each song is 3 minutes.
+* Display a menu that allow the user add songs by name to the playlist. 
+* Print a message when the maximum number of songs is reached
+* Print the name of the song that is dequeued from the playlist
+* Create a method that returns the size of the queue to use its value for the logic of the code
+* Create a method that prints the amount of time (in minutes) that it will take until an specific song can be played
+
+You can test your program with the following scenarios:
+
+* Test 1: Add the name of 20 songs. **Expected outcome:** Print the name of the 20 songs when they are dequeued.
+* Test 2: Add more than 20 songs. **Expected outcome:** Print a message when the maximum number of songs is reached
+* Test 3: Ask for the amount of time that will elapse until this song is played. **Expected outcome:**
 
 [Back to Welcome Page](1-welcome.md)
