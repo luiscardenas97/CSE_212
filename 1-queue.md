@@ -131,9 +131,35 @@ Remember that there are many ways to implement the same idea; therefore, your pr
 
 You can test your program with the following scenarios:
 
-* Test 1: Add the name of 20 songs and play songs from playlist. **Expected outcome:** Print the name of the 20 songs, in the order that were added, with the name of the artist and duration.
+* Test 1: Add the name of 20 songs and play songs from playlist. You might use the table found at the end of this page with some songs, their artist and duration. **Expected outcome:** Print the name of the 20 songs, in the order that were added, with the name of the artist and duration.
 * Test 2: Add the name of the same 20 songs again + 1 extra song. **Expected outcome:** Print a message when the maximum number of songs is reached
-* Test 3: Ask for the amount of time that will elapse until this song is played. **Expected outcome:** Print song's duration. It should be. 
+* Test 3: Ask for the amount of time that will elapse until the song "An Angel from on High" is played. The songs should be added in the same order as in the table. **Expected outcome:** Print song's duration. It should be 34.74 minutes. 
+
+
+| **Name of the Song**                  | **Artist**                 | **Duration (in minutes)** |
+|---------------------------------------|----------------------------|--------------|
+| The Morning Breaks                    | Parley P. Pratt            | 03.25        |
+| The Spirit of God                     | William W. Phelps          | 05.90        |
+| Now Let Us Rejoice                    | William w. Phelps          | 03.45        |
+| Truth Eternal                         | Parley P. Pratt            | 02.02        |
+| High on the Mountain Top              | Joel H. Johnson            | 02.52        |
+| Redeemer of Israel                    | William W. Phelps          | 04.15        |
+| Israel, Israel God is Calling         | Richard Smyth              | 03.85        |
+| Awake and Arise                       | Theodore E. Curtis         | 02.50        |
+| Come, Rejoice                         | Tracy Y. Cannon            | 02.55        |
+| Come, Sing to the Lord                | Gerrit de Jong Jr.         | 02.25        |
+| What Was Witnessed in the Heavens?    | John S. Davis              | 02.30        |
+| An Angel from on High                 | Parley P. Pratt            | 04.42        |
+| Sweet is the Peace the Gospel Brings  | Mary Ann Morton            | 03.58        |
+| I Saw a Mighty Angel Fly              | Ralph Vaughn Williams      | 02.38        |
+| What Glorious Scenes Mine Eyes Behold | Ebenezer Beesley           | 03.68        |
+| Awake Ye Saints of God, Awake         | Eliza R. Snow              | 03.13        |
+| The Voice of God Again Is Heard       | Evan Stephens              | 02.10        |
+| We Thank Thee O God, For a Prophet    | William Fowler             | 02.75        |
+| God of Power, God of Right            | Wallace F. Bennett         | 01.95        |
+| Come, Listen to a Prophet's Voice     | Joseph S. Murdock          | 03.18        |
+| We Listen to a Prophet's Voice        | Marylou Cunningham Leavitt | 02.9        |
+
 
 You can check your work with the solution here: [Solution](playlist_handler.py)
 

@@ -177,7 +177,9 @@ Besides the methods previously mentioned for the implementation of the linked li
 * >``` length = len(list) ```: It returns the size of the linked list
 * >``` if len(list) = 0 ```: It checks if the linked list is empty. If it's, it returns true
 
-## Example
+## Example: List of Student Enrolled in Class
+In the example below, we will write a simple program that create a linked list with the names of all the students enrolled in a circuits class. This linked list will be in alphabetical order; therefore, it should allow to add new names at the front, middle and back of the list. Despite that there is already a built-in class on Python to create a linked list, we will use our knowledge on object-oriented programming to come up with our own class to do this. The specifications for the program are the following:
+
 
 ## Problem to Solve
 
