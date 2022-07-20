@@ -158,7 +158,7 @@ You can test your program with the following scenarios:
 | We Thank Thee O God, For a Prophet    | William Fowler             | 02.75        |
 | God of Power, God of Right            | Wallace F. Bennett         | 01.95        |
 | Come, Listen to a Prophet's Voice     | Joseph S. Murdock          | 03.18        |
-| We Listen to a Prophet's Voice        | Marylou Cunningham Leavitt | 02.9        |
+| We Listen to a Prophet's Voice        | Marylou Cunningham Leavitt | 02.90        |
 
 
 You can check your work with the solution here: [Solution](playlist_handler.py)
