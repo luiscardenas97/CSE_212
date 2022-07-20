@@ -117,17 +117,24 @@ while exit_menu == "no":
     print()
 ```
 ## Problem to Solve: Music Playlist Creator Software
-Write a program that implement a queue to create a songs playlist with a maximum of 20 songs. This should allow the user to add new songs to the playlist and dequeue songs that were already played. Consider the duration of each song is 3 minutes.
-* Display a menu that allow the user add songs by name to the playlist. 
-* Print a message when the maximum number of songs is reached
-* Print the name of the song that is dequeued from the playlist
-* Create a method that returns the size of the queue to use its value for the logic of the code
+Write a program that implement a queue to create a songs playlist with a maximum of 20 songs. This should allow the user to add new songs to the playlist and dequeue songs that were already played. The general instructions for the program are:
+* Create a class that contains a queue for the playlist with a maximum size of 20
+* Create a class inside the queue class that contains the information of each song (name, artist, and duration) 
+* Create a method inside the song class called `__str__ ` that return the string structure in which the dequeued songs will be print. It should print the name of the song with the artist and duration
+* Create a method that allows  to enqueue songs to the playlist. It should print a message when the maximum number of songs is reached
+* Create a method that allows to dequeque songs from the paylist
+* Create a method called `len()` that returns the size of the queue to use its value for the logic of the code. `hint:` look at the print management example.
 * Create a method that prints the amount of time (in minutes) that it will take until an specific song can be played
+* Display a menu that allow the user add songs by name to the playlist, play (print) songs from playlist and calculate and print time until an specific song will be played. `hint:` again look at the print management example. It will give you an idea of how to create and display a menu.
+
+Remember that there are many ways to implement the same idea; therefore, your program shouldn't necessarily be exactly the same as our solution. Also, you will need to apply the knowledge you have acquired about object-oriented programing.
 
 You can test your program with the following scenarios:
 
-* Test 1: Add the name of 20 songs. **Expected outcome:** Print the name of the 20 songs when they are dequeued.
-* Test 2: Add more than 20 songs. **Expected outcome:** Print a message when the maximum number of songs is reached
-* Test 3: Ask for the amount of time that will elapse until this song is played. **Expected outcome:**
+* Test 1: Add the name of 20 songs and play songs from playlist. **Expected outcome:** Print the name of the 20 songs, in the order that were added, with the name of the artist and duration.
+* Test 2: Add the name of the same 20 songs again + 1 extra song. **Expected outcome:** Print a message when the maximum number of songs is reached
+* Test 3: Ask for the amount of time that will elapse until this song is played. **Expected outcome:** Print song's duration. It should be. 
+
+You can check your work with the solution here: [Solution](playlist_handler.py)
 
 [Back to Welcome Page](1-welcome.md)
