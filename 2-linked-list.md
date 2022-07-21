@@ -177,9 +177,15 @@ Besides the methods previously mentioned for the implementation of the linked li
 * >``` length = len(list) ```: It returns the size of the linked list
 * >``` if len(list) = 0 ```: It checks if the linked list is empty. If it's, it returns true
 
-## Example: List of Student Enrolled in Class
-In the example below, we will write a simple program that create a linked list with the names of all the students enrolled in a circuits class. This linked list will allow the instructor add new student to the course in the order he or she wishes; therefore, the program should him or her to add at the beginning, middle or end of the list. Despite that there is already a built-in class on Python to create a linked list, we will use our knowledge on object-oriented programming to come up with our own class to do this. The specifications for the program are the following:
-* Add new students to the 
+## Example: List of Student Enrolled in a Class
+In the example below, we will write a simple program that create a linked list with the names of all the students enrolled in a circuits class. This linked list will allow the instructor add new student to the course in the order he or she wishes; therefore, the program should allow him or her to add at the beginning, middle or end of the list. Despite that there is already a built-in class on Python to create a linked list, we will use our knowledge on object-oriented programming to come up with our own class to do this. The specifications for the program are the following:
+* Add new students to the beginning or end of the linked list
+* Add new student after another specific student
+* Remove student at the beginning, end or middle of the linked list
+* Print the linked list with the student enrolled in the class
+* Print a message when the student try to remove a student from an empty list
+
+<br> 
 
 ```python
 import string
@@ -349,9 +355,9 @@ while exit_menu == "no":
     elif operation == 2:
         while request == 1:
             student_name = input("\nPlease introduce the name of the new student you want to add to the enrolled list: ")
-            student_name_format = string.capwords(student_name)
+            student_name_format = string.capwords (student_name) # Convert the string with the student name to the right format
             previous_student = input("\nPlease introduce the name of the student after which you want to add the new student: ")
-            previous_student_format = string.capwords(previous_student)
+            previous_student_format = string.capwords(previous_student) # Convert the string with the student name to the right format
             student_list.insert_student_after(previous_student_format, student_name_format)
 
             request = int(input("\nDo you want to add another student at the middle of the enrolled list? (Enter 1 for yes and 0 for no): "))
@@ -360,7 +366,7 @@ while exit_menu == "no":
     elif operation == 3:
         while request == 1:
             student_name = input("\nPlease introduce the name of the student you want remove from the enrolled list: ")
-            student_name_format = string.capwords(student_name)
+            student_name_format = string.capwords(student_name) # Convert the string with the student name to the right format
             student_list.remove_student_in_middle(student_name_format)
 
             request = int(input("\nDo you want to remove another student from the enrolled list? (Enter 1 for yes and 0 for no): "))
