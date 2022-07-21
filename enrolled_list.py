@@ -43,7 +43,7 @@ class EnrolledList:
                 if current_student == self.last_student:
                     self.insert_student_at_end(enrolling_student)
                 else:
-                    new_student = EnrolledList.Student_Name(student_name)
+                    new_student = EnrolledList.Student_Name(enrolling_student)
                     new_student.previous_student = current_student
                     new_student.next_student = current_student.next_student
                     current_student.next_student.previous_student = new_student
@@ -128,7 +128,7 @@ while exit_menu == "no":
         while request == 1:
             student_name = input("\nPlease introduce the name of the new student you want to add to the enrolled list: ")
             student_name_format = string.capwords(student_name)
-            previous_student = input("\nPlease introduce the name of the after which you want to add the new student: ")
+            previous_student = input("\nPlease introduce the name of the student after which you want to add the new student: ")
             previous_student_format = string.capwords(previous_student)
             student_list.insert_student_after(previous_student_format, student_name_format)
 
