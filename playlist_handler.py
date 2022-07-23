@@ -15,7 +15,7 @@ class Playlist_Queue:
             return "The song '" + self.song_name + "' by " + self.artist + " is being played - Duration: " + self.duration + " minutes" 
     
     # Method create the queue for the playlist with a list
-    def __init__(self) -> None:
+    def __init__(self):
         self.songs_playlist = []
         self.max_size = 20          #Declare the size of the queue
 

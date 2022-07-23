@@ -386,4 +386,6 @@ while exit_menu == "no":
 
 ## Problem to Solve
 
+You can check your work with the solution here: [Solution](enrolled_list.py)
+
 [Back to Welcome Page](1-welcome.md)
