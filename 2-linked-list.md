@@ -471,7 +471,9 @@ while exit_menu == "no":
     print()
 ```
 <br>
-The following figure shows a screenshow of the functioning of the Photo Viewer program:
+The following figure shows a screenshot of the functioning of the Photo Viewer program:
+
+<br>
 
 ![Figure 4](photo_viewer.png)
 <figcaption align = "center"><b>Figure 4 - Photo Viewer</b></figcaption>
