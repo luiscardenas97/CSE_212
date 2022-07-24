@@ -470,7 +470,9 @@ while exit_menu == "no":
     
     print()
 ```
+
 <br>
+
 The following figure shows a screenshot of the functioning of the Photo Viewer program:
 
 <br>
