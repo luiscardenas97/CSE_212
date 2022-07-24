@@ -515,7 +515,7 @@ You can test your program with the following scenarios:
 
 * Test 1: Add the student names on the table from 1-7. Then print the enrollement list. **Expected outcome:** Print the enrollment list in the same order in which the names were added.
 * Test 2: Remove James Miller (first student) from the front of the list. Add Matthew Lee at the front of the list. Then print the enrollment list. **Expected outcome:** Print the enrollment list in the same order as in the previous step, except that Matthew Lee is at the front of the list and James Miller was removed from the list.
-* Test 3: Remove Sarah More (last student)  from the end of the list. Add Steven Martinez at the end of the list. Then print the enrollment list. **Expected outcome:** Print the enrollment list in the same order as the in previous step, except that Steven Martinez is at the end of the list and Sarah Moore was removed from the list.
+* Test 3: Remove Sarah More (last student)  from the end of the list. Add Steven Martinez at the end of the list. Then print the enrollment list. **Expected outcome:** Print the enrollment list in the same order as in the previous step, except that Steven Martinez is at the end of the list and Sarah Moore was removed from the list.
 * Test 4: Remove Joseph Williams from the middle of the list. Add Shirley Cook after Emily Jones. Then print the enrollment list. **Expected outcome:** Print the enrollment list in the same order as in the previous step, except that Shirley Cook is after Emily Jones in the list and Joseph Williams was removed from the list.
 * Test 5: Add Robert Smith to the enrollment list again. **Expected outcome:** Print message saying that Robert Smith is already in the list and can't be added again.
 
