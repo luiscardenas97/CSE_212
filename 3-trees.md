@@ -8,8 +8,8 @@ There are several types of trees we could talk about; however, we will limit our
 
 <br>
 
-![Figure 4](Binary_Tree.png)
-<figcaption align = "center"><b>Figure 4 - Binary Tree</b></figcaption>
+![Figure 5](Binary_Tree.png)
+<figcaption align = "center"><b>Figure 5 - Binary Tree</b></figcaption>
 
 <br>
 
@@ -17,8 +17,8 @@ A binary tree can also be classified into two other categories, a full binary tr
 
 <br>
 
-![Figure 5](Full_Complete_Binary_Tree.png)
-<figcaption align = "center"><b>Figure 5 - Full Binary Tree / Complete Binary Tree </b></figcaption>
+![Figure 6](Full_Complete_Binary_Tree.png)
+<figcaption align = "center"><b>Figure 6 - Full Binary Tree / Complete Binary Tree </b></figcaption>
 
 <br>
 
@@ -26,15 +26,15 @@ The second type of tree structure we will introduce is the **binary search tree 
 
 <br>
 
-![Figure 6](BST.png)
-<figcaption align = "center"><b>Figure 6 - Binary Search Tree (BST) </b></figcaption>
+![Figure 7](BST.png)
+<figcaption align = "center"><b>Figure 7 - Binary Search Tree (BST) </b></figcaption>
 
 <br>
 
 <br>
 
-![Figure 7](BST_performance.png)
-<figcaption align = "center"><b>Figure 7 - BST Typical Operation </b></figcaption>
+![Figure 8](BST_performance.png)
+<figcaption align = "center"><b>Figure 8 - BST Typical Operation </b></figcaption>
 
 <br>
 
@@ -42,29 +42,29 @@ Finally, we want to introduce the type of tree structure called **balanced binar
 
 <br>
 
-![Figure 8](AVL_BBST.png)
-<figcaption align = "center"><b>Figure 8 - AVL Balanced BST </b></figcaption>
+![Figure 9](AVL_BBST.png)
+<figcaption align = "center"><b>Figure 9 - AVL Balanced BST </b></figcaption>
 
 <br>
 
 <br>
 
-![Figure 9](AVL_BBST_performance.png)
-<figcaption align = "center"><b>Figure 9 - AVL Balanced BST Typical Operation </b></figcaption>
+![Figure 10](AVL_BBST_performance.png)
+<figcaption align = "center"><b>Figure 10 - AVL Balanced BST Typical Operation </b></figcaption>
 
 <br>
 
 <br>
 
-![Figure 10](Red_Black_BBST.png)
-<figcaption align = "center"><b>Figure 10 - Red Black Balanced BST  </b></figcaption>
+![Figure 11](Red_Black_BBST.png)
+<figcaption align = "center"><b>Figure 11 - Red Black Balanced BST  </b></figcaption>
 
 <br>
 
 <br>
 
-![Figure 11](Red_Black_BBST_performance.png)
-<figcaption align = "center"><b>Figure 11 - Red Black Balanced BST Typical Operation </b></figcaption>
+![Figure 12](Red_Black_BBST_performance.png)
+<figcaption align = "center"><b>Figure 12 - Red Black Balanced BST Typical Operation </b></figcaption>
 
 <br>
 
