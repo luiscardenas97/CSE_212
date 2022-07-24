@@ -57,7 +57,7 @@ The following pieces of code can be used to implement a queue in Python:
 * >``` if len(list) = 0 ```: It checks if the queue is empty. If it's, it returns true
 
 
-## Example: Printer Manager Using a Queue
+## Example: Printer Manager Software Using a Queue
 In the example below, we will write a simple Printer Manager program, which will use a class to implement a queue. Every time this class is called, a list will be created where the elements of the queue will be added. The requirements for the software are the following:
 
 * Allow the user to add files to the queue to be printed. Maximum amount of files allowed is 10
@@ -117,10 +117,10 @@ while exit_menu == "no":
     print()
 ```
 ## Problem to Solve: Music Playlist Creator Software
-Write a program that implement a queue to create a songs playlist with a maximum of 20 songs. This should allow the user to add new songs to the playlist and dequeue songs that were already played. The general instructions for the program are:
+Write a program that implements a queue to create a songs playlist with a maximum of 20 songs. This should allow the user to add new songs to the playlist and dequeue songs that were already played. The general instructions for the program are:
 * Create a class that contains a queue for the playlist with a maximum size of 20
 * Create a class inside the queue class that contains the information of each song (name, artist, and duration) 
-* Create a method inside the song class called `__str__ ` that return the string structure in which the dequeued songs will be print. It should print the name of the song with the artist and duration
+* Create a method inside the song class called `__str__ ` that return the string structure in which the dequeued songs will be printed. It should print the name of the song with the artist and duration
 * Create a method that allows  to enqueue songs to the playlist. It should print a message when the maximum number of songs is reached
 * Create a method that allows to dequeque songs from the paylist
 * Create a method called `len()` that returns the size of the queue to use its value for the logic of the code. `hint:` look at the print management example.

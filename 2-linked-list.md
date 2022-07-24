@@ -4,7 +4,7 @@ Sometimes when creating an array, it's hard to know how many items we will inclu
 <br> 
 
 ## Structure
-There are two possible structure a linked list can have. The first type is shown in Figure 2. For this one, each element, also referred as **node**, has an associated **value** and a **pointer** to the address in memory of the **next node** in the list. Usually, the first element in the linked list is called **head**.
+There are two possible structures a linked list can have. The first type is shown in Figure 2. For this one, each element, also referred as **node**, has an associated **value** and a **pointer** to the address in memory of the **next node** in the list. Usually, the first element in the linked list is called **head**.
 
 <br> 
 
@@ -178,16 +178,16 @@ Besides the methods previously mentioned for the implementation of the linked li
 * >``` if len(list) = 0 ```: It checks if the linked list is empty. If it's, it returns true
 
 ## Example: Photo Viewer Software Using a Linked List
-In the example below, we will write a simple program that create a linked list with pictures that will be display with a Photo Viewer software. This linked list will allow the user add and delete pictures to the list in the order the user wishes; therefore, the program should allow the user to add or delete at the beginning, middle or end of the list. Despite that there is already a built-in class on Python to create a linked list, we will use our knowledge on object-oriented programming to come up with our own class to do this. The specifications for the program are the following:
+In the example below, we will write a program that create a linked list with pictures that will be display with a Photo Viewer software. This linked list will allow the user to add and delete pictures to the list in the order the user wishes; therefore, the program should allow the user to add or delete at the beginning, middle or end of the list. Despite that there is already a built-in class on Python to create a linked list, we will use our knowledge on object-oriented programming to come up with our own class to do this. The specifications for the program are the following:
 * Add new pictures to the beginning or end of the linked list
 * Add new picture after another specific old picture
-* Users will need to add a picture to the linked list by using the name of the file they want to add. Add the file type is not necessary. `Example:` fox. Users need to make user that picture are save in the same folder where they save this program. Otherwise, they will need to edit the path of the picture.
+* Users will need to add a picture to the linked list by using the name of the file they want to add. Adding the file type is not necessary. `Example:` fox. Users need to make sure that the picture is in the same folder where they have saved this program. Otherwise, they will need to edit the path of the picture.
 * Delete pictures at the beginning, end or middle of the linked list
-* Display the linked list with all the pictures by using a Photo Viewer software created using GUI imported classes, starting by first picture in the linked list.  Create a "Next Picture" button that allows the user go to the next picture in the linked list.
-* Print a message when the user try to delete a picture from an empty list
-* Don't allow user add pictures that are already in the list. Print a message telling the user to add another image
+* Display the linked list with all the pictures by using a Photo Viewer software created using GUI imported classes, starting with the first picture in the linked list.  Create a "Next Picture" button that allows the user to go to the next picture in the linked list.
+* Print a message when the user tries to delete a picture from an empty list
+* Don't allow user to add pictures that are already in the list. Print a message telling the user to add another image
 * Allow user to replace an old picture with a new picture
-* Create menu that allows the user to select the diffent operations that can be done with the linked list
+* Create a menu that allows the user to select the different operations that can be done with the linked list
 * Create an option to exit the menu
 
 <br> 
@@ -485,8 +485,39 @@ The following figure shows a screenshot of the functioning of the Photo Viewer p
 
 The following link will give you access to a free library of pictures you can use to add to the linked list and test the program: [Pictures](https://drive.google.com/drive/folders/1U-Nlk2GGDAqfBnes4ZAHNrCecyyNyhnX?usp=sharing)
 
+<br>
 
-## Problem to Solve: Enrolled 
+## Problem to Solve: Students Enrollment List Program 
+Write a piece of software that implements a linked list to create a program that allows the Circuit Class instructor to add and delete students from the class enrollment list. The students can't be added twice to the list. The general instructions for the program are:
+* Create a class that containts the linked list with the student names. `__init__` method should initilize the list to be empty.
+* Create a class that contains the name of each student as a node, the next student in the list and the previous student in the list. `__init__` method should initilize the student name with the next student and previous student set to `None`.
+* Create methods to insert a new student at the front, end or middle of the linked list. To add in the middle, consider asking the user a student name after which you wante to add the new student. `hint:` look at the Photo Viewer example
+* Create methods to remove a student at the front, end or middle of the linked list. To remove in the middle, consider asking the user for the student name you want to remove. You can use the methods to remove at the front or end within the method to remove at the middle of the list.
+* Create a method called `__iter()` that will allow you to iterate through the linked list and return the name of current student in the iteration. This method will allow you to use the 'for' loop within other methods. `hint:` look at the Photo Viewer example
+* Create a method that will allow you to check if a student name is already in the linked list. If a student name is already in the list, it should return `True`; otherwise, it should return `False`.
+* Create a method called `__str__()` that return the string structure in which the linked list will be printed. `hint:` look at the Music Playlist Creator Software example in the queue section
+* Create a menu that allows the user to select the different operations that can be performed with a linked list: add new student at the beginning or end of the list, add new student after an specific student in the list, remove student at any place from the list and print the enrollment student list. Add an option to exit the menu
+
+You can test your program with the following scenarios:
+
+| **Position in the List** | **Student Name** |
+|:-------------------------:|:----------------:|
+|             1             |   James Miller   |
+|             2             |   Robert Smith   |
+|             3             |   John Anderson  |
+|             4             |    Emily Jones   |
+|             5             |  Joseph Williams |
+|             6             |   Thomas Brown   |
+|             7             |    Sarah Moore   |
+|             8             |    Matthew Lee   |
+|             9             |  Steven Martinez |
+|             10            |   Shirley Cook   |
+
+* Test 1: Add the student names on the table from 1-7. Then print the enrollement list. **Expected outcome:** Print the enrollment list in the same order in which the names were added.
+* Test 2: Remove James Miller (first student) from the front of the list. Add Matthew Lee at the front of the list. Then print the enrollment list. **Expected outcome:** Print the enrollment list in the same order as in the previous step, except that Matthew Lee is at the front of the list and James Miller was removed from the list.
+* Test 3: Remove Sarah More (last student)  from the end of the list. Add Steven Martinez at the end of the list. Then print the enrollment list. **Expected outcome:** Print the enrollment list in the same order as the in previous step, except that Steven Martinez is at the end of the list and Sarah Moore was removed from the list.
+* Test 4: Remove Joseph Williams from the middle of the list. Add Shirley Cook after Emily Jones. Then print the enrollment list. **Expected outcome:** Print the enrollment list in the same order as in the previous step, except that Shirley Cook is after Emily Jones in the list and Joseph Williams was removed from the list.
+* Test 5: Add Robert Smith to the enrollment list again. **Expected outcome:** Print message saying that Robert Smith is already in the list and can't be added again.
 
 You can check your work with the solution here: [Solution](enrolled_list.py)
 
