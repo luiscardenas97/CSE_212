@@ -57,7 +57,7 @@ The following pieces of code can be used to implement a queue in Python:
 * >``` if len(list) = 0 ```: It checks if the queue is empty. If it's, it returns true
 
 
-## Example: Printer Manager
+## Example: Printer Manager Using a Queue
 In the example below, we will write a simple Printer Manager program, which will use a class to implement a queue. Every time this class is called, a list will be created where the elements of the queue will be added. The requirements for the software are the following:
 
 * Allow the user to add files to the queue to be printed. Maximum amount of files allowed is 10

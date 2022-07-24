@@ -150,6 +150,7 @@ class EnrolledList:
         
         return student_list
 
+# Create a new enrolled list
 student_list = EnrolledList()
 
 exit_menu = "no"
@@ -183,7 +184,7 @@ while exit_menu == "no":
             
             request = int(input("\nDo you still want to add another student at the beginning or end of the enrolled list? (Enter 1 for yes and 0 for no): "))
 
-    # Add new student to the linked list after an specific student
+    # Add new student to the linked list after a specific student
     elif operation == 2:
         while request == 1:
             student_name = input("\nPlease introduce the name of the new student you want to add to the enrolled list: ")
