@@ -181,6 +181,7 @@ Besides the methods previously mentioned for the implementation of the linked li
 In the example below, we will write a simple program that create a linked list with pictures that will be display with a Photo Viewer software. This linked list will allow the user add and delete pictures to the list in the order the user wishes; therefore, the program should allow the user to add or delete at the beginning, middle or end of the list. Despite that there is already a built-in class on Python to create a linked list, we will use our knowledge on object-oriented programming to come up with our own class to do this. The specifications for the program are the following:
 * Add new pictures to the beginning or end of the linked list
 * Add new picture after another specific old picture
+* Users will need to add a picture to the linked list by using the name of the file they want to add. Add the file type is not necessary. `Example:` fox. Users need to make user that picture are save in the same folder where they save this program. Otherwise, they will need to edit the path of the picture.
 * Delete pictures at the beginning, end or middle of the linked list
 * Display the linked list with all the pictures by using a Photo Viewer software created using GUI imported classes, starting by first picture in the linked list.  Create a "Next Picture" button that allows the user go to the next picture in the linked list.
 * Print a message when the user try to delete a picture from an empty list
