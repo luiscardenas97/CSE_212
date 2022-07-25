@@ -301,11 +301,11 @@ while exit_menu == "no":
 
             revenue.add_data(revenue_amount, week_number)
         
-            request = int(input("\nDo you want to add weekly revenue? (Enter 1 for yes and 0 for no): "))
+            request = int(input("\nDo you want to add another weekly revenue? (Enter 1 for yes and 0 for no): "))
 
     # Print the list with the weekly revenues of the whole year in descending order
     elif operation == 2:
-        print("Weekly Revenue | Week Number")
+        print("\nWeekly Revenue | Week Number")
         for x in reversed(revenue):
             print(f"    {x[0]}       |    {x[1]}")  
         print() 
@@ -369,5 +369,6 @@ In case you want to test this program, you can use the data found in the followi
 
 ## Problem to Solve
 
+You can check your work with the solution here: [Solution](donation_BST.py)
 
 [Back to Welcome Page](1-welcome.md)
