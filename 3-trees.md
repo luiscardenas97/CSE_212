@@ -214,30 +214,30 @@ class BST_Revenue:
 
     # Iterator function that will be called each time a for loop is performed
     def __iter__(self):
-        yield from self._iterate_forward(self.initial)
+        yield from self._traverse_forward(self.initial)
 
     # Allow to traverse forward the BST and return the values of each node from
     # lowest revenue to highest revenue
-    def _iterate_forward(self, revenue):
+    def _traverse_forward(self, revenue):
         # If root node is not empty, use recursion to return node information
         if revenue is not None:
-            yield from self._iterate_forward(revenue.lesser)
+            yield from self._traverse_forward(revenue.lesser)
             yield [revenue.data, revenue.week]
-            yield from self._iterate_forward(revenue.greater)  
+            yield from self._traverse_forward(revenue.greater)  
     
-    # Perform a backward traversal. It gets called when the method _iterate_backward
+    # Perform a backward traversal. It gets called when the method _traverse_backward
     # is called.
     def __reversed__(self):
-        yield from self._iterate_backward(self.initial)
+        yield from self._traverse_backward(self.initial)
 
     # Allow to traverse backward the BST and return the values of each node from
     # highest revenue to lowest revenue
-    def _iterate_backward(self, revenue):
+    def _traverse_backward(self, revenue):
         # If root node is not empty, use recursion to return node information
         if revenue is not None:
-            yield from self._iterate_backward(revenue.greater)
+            yield from self._traverse_backward(revenue.greater)
             yield [revenue.data, revenue.week]
-            yield from self._iterate_backward(revenue.lesser) 
+            yield from self._traverse_backward(revenue.lesser) 
 
     # Determine the sum of the heights of all the subtrees
     def get_amount_of_weeks(self):
