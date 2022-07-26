@@ -1,5 +1,5 @@
 # Queues
-A queue is data structure that allows the user to organize and store data in a "First In, First Out" (FIFO) configuration. This data structure is commonly represented as a line of people waiting to be served. In this arrangement, the person who joined the line first is the one who is served first. This data structure is useful whenever we want to process a group of requests or data in order of arrival. Some common queue applications are routers, print management, interrupts handling on some operating systems, or website traffic handling, among others.
+A queue is a data structure that allows the user to organize and store data in a "First In, First Out" (FIFO) configuration. This data structure is commonly represented as a line of people waiting to be served. In this arrangement, the person who joined the line first is the one who is served first. This data structure is useful whenever we want to process a group of requests or data in order of arrival. Some common queue applications are routers, print management, interrupts handling on some operating systems, or website traffic handling, among others.
 
 ## Structure
 In order to understand the structure of a queue, we can consider the following example: <br> 
@@ -34,7 +34,7 @@ del list[0]
 This would allow us to dequeue the front value and store it in a variable. Once the value is stored in a variable, we can use this variable for any other operations needed.
 <br> 
 <br> 
-Whenever we want to write to a queue, we can implement the following line of code: 
+Whenever we want to add to a queue, we can implement the following line of code: 
 
 ```python
 #This line of code appends a new item to the back of the queue
@@ -52,9 +52,9 @@ The following pieces of code can be used to implement a queue in Python:
 <br> 
 
 * >``` list.append(item) ```: It adds a new item to the back of the queue
-* >``` data = list.pop(0) ```: It removes and return the item at the front of the queue
+* >``` data = list.pop(0) ```: It removes and returns the item at the front of the queue
 * >``` length = len(list) ```: It returns the size of the queue
-* >``` if len(list) = 0 ```: It checks if the queue is empty. If it's, it returns true
+* >``` if len(list) = 0 ```: It checks if the queue is empty. If it is, it returns true
 
 
 ## Example: Printer Manager Software Using a Queue
@@ -120,18 +120,18 @@ while exit_menu == "no":
 Write a program that implements a queue to create a songs playlist with a maximum of 20 songs. This should allow the user to add new songs to the playlist and dequeue songs that were already played. The general instructions for the program are:
 * Create a class that contains a queue for the playlist with a maximum size of 20
 * Create a class inside the queue class that contains the information of each song (name, artist, and duration) 
-* Create a method inside the song class called `__str__ ` that return the string structure in which the dequeued songs will be printed. It should print the name of the song with the artist and duration
-* Create a method that allows  to enqueue songs to the playlist. It should print a message when the maximum number of songs is reached
-* Create a method that allows to dequeque songs from the paylist
+* Create a method inside the song class called `__str__ ` that returns the string structure in which the dequeued songs will be printed. It should print the name of the song with the artist and duration
+* Create a method that allows you to enqueue songs to the playlist. It should print a message when the maximum number of songs is reached
+* Create a method that allows you to dequeque songs from the playlist
 * Create a method called `len()` that returns the size of the queue to use its value for the logic of the code. `hint:` look at the print management example.
-* Create a method that prints the amount of time (in minutes) that it will take until an specific song can be played
-* Display a menu that allow the user add songs by name to the playlist, play (print) songs from playlist and calculate and print time until an specific song will be played. `hint:` again look at the print management example. It will give you an idea of how to create and display a menu.
+* Create a method that prints the amount of time (in minutes) that it will take until a specific song can be played
+* Display a menu that allows the user to add songs by name to the playlist, play (print) songs from playlist and calculate and print time until a specific song will be played. `hint:` again look at the print management example. It will give you an idea of how to create and display a menu.
 
 Remember that there are many ways to implement the same idea; therefore, your program shouldn't necessarily be exactly the same as our solution. Also, you will need to apply the knowledge you have acquired about object-oriented programing.
 
 You can test your program with the following scenarios:
 
-* Test 1: Add the name of 20 songs and play songs from playlist. You might use the table found at the end of this page with some songs, their artist and duration. **Expected outcome:** Print the name of the 20 songs, in the order that were added, with the name of the artist and duration.
+* Test 1: Add the name of 20 songs and play songs from playlist. You might use the table found at the end of this page with some songs, their artist and duration. **Expected outcome:** Print the name of the 20 songs, in the order that they were added, with the name of the artist and duration.
 * Test 2: Add the name of the same 20 songs again + 1 extra song. **Expected outcome:** Print a message when the maximum number of songs is reached
 * Test 3: Ask for the amount of time that will elapse until the song "An Angel from on High" is played. The songs should be added in the same order as in the table. **Expected outcome:** Print song's duration. It should be 34.74 minutes. 
 
