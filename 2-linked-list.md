@@ -483,7 +483,7 @@ The following figure shows a screenshot of the functioning of the Photo Viewer p
 
 <br>
 
-The following link will give you access to a free library of pictures you can use to add to the linked list and test the program: [Pictures](https://drive.google.com/drive/folders/1U-Nlk2GGDAqfBnes4ZAHNrCecyyNyhnX?usp=sharing)
+The following link will give you access to a free library of pictures you can use to add to the linked list and test the program. The pictures were obtained from unsplash.com a free online source of images: [Pictures](https://drive.google.com/drive/folders/1U-Nlk2GGDAqfBnes4ZAHNrCecyyNyhnX?usp=sharing)
 
 <br>
 
