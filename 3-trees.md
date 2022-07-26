@@ -103,7 +103,7 @@ class BST:                         #Initialize a BST
     def insert(self, data):
 
         #If the root is empty, data becomes the BST root
-        if self.root is Node:
+        if self.root is None:
             self.root = BST.Node(data)  
 
         else:
@@ -126,7 +126,7 @@ class BST:                         #Initialize a BST
         elif data >= node.data:
 
             #If node to the right is empty, initilize a new node
-            if node.right is Node:
+            if node.right is None:
                 node.right = BST.Node(data)
 
             #Otherwise, use recursion to go to right node
