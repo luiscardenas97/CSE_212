@@ -1,5 +1,5 @@
 # Linked Lists
-Sometimes when creating an array, it's hard to know how many items we will include in our array or the right order in which we want to insert the items since the beginning of our project. In such situations, it's very common change our mind or make mistakes and we want to have an easy way to add or delete elements that are not necessary in the beginning or the end of our array. Maybe we want to do it in the middle of our arrangement. If this is our thinking, not many data structures give us this flexibility to easily add elements into our array. However, **Linked lists** allows us to collect data and stored it in memory in a random way. This data structure guarantees us that each element in the list will be stored in some place in memory but not each element will necessarily located in the address next to another element. To understand how it's possible that this data structure keep all the items in the list together, you can read the next section. 
+Sometimes when creating an array, it's hard to know how many items we will include in our array or the right order in which we want to insert the items since the beginning of our project. In such situations, it's very common to change our mind or make mistakes and we want to have an easy way to add or delete elements that are not necessary in the beginning or the end of our array. Maybe we want to do it in the middle of our arrangement. If this is our thinking, not many data structures give us this flexibility to easily add elements into our array. However, **Linked lists** allows us to collect data and store it in memory in a random way. This data structure guarantees us that each element in the list will be stored in some place in memory but not each element will necessarily be located in the address next to another element. To understand how it's possible that this data structure keeps all the items in the list together, you can read the next section. 
 
 <br> 
 
@@ -21,14 +21,14 @@ The second structure that a linked list can have is shown in Figure 3. This one 
 
 <br> 
 
-A powerful property this data structure has is the ability to traverse through the list until we get to the node we want to use for a certain operation. In order to this, it's necessary to know where the head or tail are; that way, we can traverse or reverse traverse until we get to the specific pot where we want to add a new node or remove a node.
+A powerful property this data structure has is the ability to traverse through the list until we get to the node we want to use for a certain operation. In order to use this, it's necessary to know where the head or tail are; that way, we can traverse or reverse traverse until we get to the specific point where we want to add a new node or remove a node.
 
 <br> 
 
 ## How to Insert, Remove and Access Data From a Linked List
-The three main operations that can be performed with liked lists are inserting data, removing data and accessing to the data in the list. We will first focus on inserting data to a linked list. 
+The three main operations that can be performed with liked lists are inserting data, removing data and accessing the data in the list. We will first focus on inserting data to a linked list. 
 
-Inserting a new node in a linked list can be done at the head, tail or middle. Due to that pointers allows us to connect a new node to the next or previous node, the size of the list is not a problem when using this data structure. The processes of inserting at head and tail are very similar. Inserting in the middle can differ from the other two slightly.
+Inserting a new node in a linked list can be done at the head, tail or middle. Due to that pointers allow us to connect a new node to the next or previous node, the size of the list is not a problem when using this data structure. The processes of inserting at head and tail are very similar. Inserting in the middle can differ from the other two slightly.
 
 ### Create a linked list and a new node:
 ```python
@@ -141,7 +141,7 @@ current.prev.next = current.next
 
 <br> 
 
-Whenever we want to access to data in the list, we need to traverse the list starting by the head or the tail. This can be done by using a while loop and following the "next" or "prev" linked node until we get to the value we are trying to find or the end of the list.
+Whenever we want to access data in the list, we need to traverse the list starting by the head or the tail. This can be done by using a while loop and following the "next" or "prev" linked node until we get to the value we are trying to find or the end of the list.
 
 ### Access a node from the linked list: 
 ```python
@@ -178,9 +178,9 @@ Besides the methods previously mentioned for the implementation of the linked li
 * >``` if len(list) = 0 ```: It checks if the linked list is empty. If it's, it returns true
 
 ## Example: Photo Viewer Software Using a Linked List
-In the example below, we will write a program that create a linked list with pictures that will be display with a Photo Viewer software. This linked list will allow the user to add and delete pictures to the list in the order the user wishes; therefore, the program should allow the user to add or delete at the beginning, middle or end of the list. Despite that there is already a built-in class on Python to create a linked list, we will use our knowledge on object-oriented programming to come up with our own class to do this. The specifications for the program are the following:
+In the example below, we will write a program that creates a linked list with pictures that will be displayed with a Photo Viewer software. This linked list will allow the user to add and delete pictures to the list in the order the user wishes; therefore, the program should allow the user to add or delete at the beginning, middle or end of the list. Despite that there is already a built-in class on Python to create a linked list, we will use our knowledge on object-oriented programming to come up with our own class to do this. The specifications for the program are the following:
 * Allow the user to add new pictures to the beginning or end of the linked list
-* Allow the user to add new picture after another specific old picture
+* Allow the user to add a new picture after another specific old picture
 * Users will need to add a picture to the linked list by using the name of the file they want to add. Adding the file type is not necessary. `Example:` fox. Users need to make sure that the picture is in the same folder where they have saved this program. Otherwise, they will need to edit the path of the picture.
 * Allow the user to delete pictures at the beginning, end or middle of the linked list
 * Display the linked list with all the pictures by using a Photo Viewer software created using GUI imported classes, starting with the first picture in the linked list.  Create a "Next Picture" button that allows the user to go to the next picture in the linked list.
@@ -491,10 +491,10 @@ The following link will give you access to a free library of pictures you can us
 Write a piece of software that implements a linked list to create a program that allows the Circuit Class instructor to add and delete students from the class enrollment list. The students can't be added twice to the list. The general instructions for the program are:
 * Create a class that containts the linked list with the student names. `__init__` method should initilize the list to be empty.
 * Create a subclass that contains the name of each student, the next student in the list and the previous student in the list as attributes of its `__init__` method. This method should initilize the student name with the next student and previous student set to `None`.
-* Create methods to insert a new student at the front, end or middle of the linked list. To add in the middle, consider asking the user a student name after which you wante to add the new student. `hint:` look at the Photo Viewer example
+* Create methods to insert a new student at the front, end or middle of the linked list. To add in the middle, consider asking the user for a student name after which you want to add the new student. `hint:` look at the Photo Viewer example
 * Create methods to remove a student at the front, end or middle of the linked list. To remove in the middle, consider asking the user for the student name you want to remove. You can use the methods to remove at the front or end within the method to remove at the middle of the list.
 * Create a method called `__iter__` that will allow you to iterate through the linked list and return the name of current student in the iteration. This method will allow you to use the 'for' loop within other methods. `hint:` look at the Photo Viewer example
-* Create a method that will allow you to check if a student name is already in the linked list. If a student name is already in the list, it should return `True`; otherwise, it should return `False`.
+* Create a method that will allow you to check if a student's name is already in the linked list. If a student name is already in the list, it should return `True`; otherwise, it should return `False`.
 * Create a method called `__str__` that return the string structure in which the linked list will be printed. `hint:` look at the Music Playlist Creator Software example in the queue section
 * Create a menu that allows the user to select the different operations that can be performed with a linked list: add new student at the beginning or end of the list, add new student after an specific student in the list, remove student at any place from the list and print the enrollment student list. Add an option to exit the menu
 
