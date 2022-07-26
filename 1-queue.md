@@ -10,7 +10,8 @@ Imagine that there are several people in line at a bank ready to be served. The 
 ![Figure 1](Queue.png)
 <figcaption align = "center"><b>Figure 1 - Queue</b></figcaption>
 <br> 
-A queue is fairly simple data structure, but it can be a powerful tool when using adequately.
+
+A queue is fairly simple data structure, but it can be a powerful tool when using adequately. Its performance in Python can vary depending of the operation, but they usually have big O notation of O(1), except for the dequeue operation that has a performance of O(n). **Big O notations** are implemented to represent the performance of an algorithm in terms of time and memory. O(1) is the ideal performance for an algorithm since it represents a constant time. O(n) also performs pretty decently because it describes the performance of a linear function.
 
 <br> 
 

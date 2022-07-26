@@ -21,7 +21,7 @@ The second structure that a linked list can have is shown in Figure 3. This one 
 
 <br> 
 
-A powerful property this data structure has is the ability to traverse through the list until we get to the node we want to use for a certain operation. In order to use this, it's necessary to know where the head or tail are; that way, we can traverse or reverse traverse until we get to the specific point where we want to add a new node or remove a node.
+A powerful property this data structure has is the ability to traverse through the list until we get to the node we want to use for a certain operation. In order to use this, it's necessary to know where the head or tail are; that way, we can traverse or reverse traverse until we get to the specific point where we want to add a new node or remove a node. In terms of performance, linked lists usually performs better than dynamic arrays because of the way in which the memory is managed. In most of the scenarios, linked lists can have a O(1) performance, except when a node is inserted to or removed from the middle of the list; those operations have O(n) performance because loops are necessary to implement them.
 
 <br> 
 
