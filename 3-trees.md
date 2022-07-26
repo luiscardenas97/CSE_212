@@ -273,7 +273,7 @@ class BST_Revenue:
 
         return x + y
 
-#Create a new BST
+#Create an empty BST
 revenue = BST_Revenue()
 
 exit_menu = "no"
@@ -364,7 +364,40 @@ In case you want to test this program, you can use the data found in the followi
 |        25       |        $4324       |
 |        26       |        $3452       |
 
-## Problem to Solve
+## Problem to Solve: Organizations and Companies Donations Tracker Program
+Write a program that implements a BST to create a organizations and companies donations tracker. A charity organization is planning on receiving donations from different organizations and companies with the purpose of helping the less fortunate. At the end of the year, there will be an event where these donations will deliver to those people. This program has the intention of making things easier for the person who will need to keep track of the donations. So this person should be able to add new organizations or companies names with their respective donations. A organization or company can't donate more than one time. This program should also deliver the total sum of all the donations made. The general instructions for the program are:
+* Create a class that contains the Binary Search Tree with the organizations and companies names and their respective donations. `__init__` method should initialize the BST to be empty (root node empty)
+* Create a subclass that contains the name of each organization or company and its respective donation and the nodes to the right and left as attributes of its `__init__` method. This method should be initialize with these two attributes and the node to the right and left of the new node set to `None`
+* Create a method to add an organization or company with its respective donation to the BST. This method should call another recursive method starting at the root node. `hint:` look at the Restaurant Weekly Revenue Tracker example
+* Create an iterator method called `__iter__` that will allow you to iterate through BST just like we did with the linked list and return the node information of each node. This method should call another recursive method starting at the root node to traverse forward to the right and left and `yield` the node information. `hint:` look at the Restaurant Weekly Revenue Tracker example
+* Create another iterator method called `__reversed__` that will allow you to iterate backward through the BST and return the node information of each node. This method should call another recursive method staring at the root node to traverse backward to the right and left and `yield` the node information. `hint:` look at the Restaurant Weekly Revenue Tracker example
+* Create a method to check if an specific organization or company already made a donation. Remember they can only made one donation. This method should call another recursive method starting at the root node and return `True` if the specified organization or company already made a donation or `False` otherwise.
+* Create a method to determine the sum of all the donations made. This method should call another recursive method starting at the root node to return the sum of all the donations made
+* Create a menu that allow the user to select the different operations that can be performed with a BST. It should allow user to print the list with all the data (organizations or companies names and donations) in descending order (from the largest donation to the smallest donation) or ascending order (from the smallest donation to the largest donation) and the sum of all the donations
+
+You can test your program by using the data found in the following table. This table only contains donations made during the first three months of the year:
+
+| **Organization or Company Name** | **Donation** |
+|:--------------------------------:|:------------:|
+|        Hope For The Future       |    $11500    |
+|  Association For A Better World  |    $10800    |
+|           Sandy Bakery           |    $11300    |
+|            Sarah Cooks           |    $12400    |
+|     Elijah's Woodcraft & Co.     |    $15000    |
+|        Yummy Water Company       |    $12500    |
+|     Play That Works! Company     |    $20000    |
+|         Luna's Lollipops         |    $13200    |
+|       Silver & Gold Company      |    $21000    |
+|      Arky Architecture Firm      |    $24000    |
+|   Bread Association of America   |    $14300    |
+|     Sleepy Shrimp Restaurant     |    $10200    |
+|        Ascending Together        |    $11600    |
+|           Gatos Galore           |    $10700    |
+|         Brighter Tomorrow        |    $12600    |
+
+* Test 1: Add the organizations and companies names and their respective donations to the BST. Then print the BST in descending order. **Expected outcome:** Print all the organizations and companies names on the table with their respective donations in descending order. The company or organization that made the largest donation first; this is Arky Architecture Firm.
+* Test 2: Try adding the organization "Ascending Together" to the BST again. Then print the BST in ascending order. **Expected outcome:** Print a message saying that this organization already made a donation, and it can't donate again. Print all the organizations and companies names on the table with their respective donations in ascending order. The company or organization that made the smallest donation first; this is Sleepy Shrimp Restaurant.
+* Test 3: Ask for the total sum of all the donations so far. **Expected outcome:** Print the correct sum of all the donations so far. The total sum should be $211,100.
 
 You can check your work with the solution here: [Solution](donation_BST.py)
 

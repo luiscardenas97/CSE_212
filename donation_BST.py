@@ -1,7 +1,7 @@
 
 import string
 
-# Class that conatins the Binary Search Tree to keep track of Donations
+# Class that contains the Binary Search Tree to keep track of Donations
 class BST_Donations:
     # Subclass that containts the information for each node. In this case, each node
     # stores the information of donations made by organizations or companies and their names
@@ -133,6 +133,7 @@ class BST_Donations:
         # Return sum
         return x + y
 
+# Create an empty BST
 donations = BST_Donations()
 
 exit_menu = "no"

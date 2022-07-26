@@ -490,12 +490,12 @@ The following link will give you access to a free library of pictures you can us
 ## Problem to Solve: Students Enrollment List Program 
 Write a piece of software that implements a linked list to create a program that allows the Circuit Class instructor to add and delete students from the class enrollment list. The students can't be added twice to the list. The general instructions for the program are:
 * Create a class that containts the linked list with the student names. `__init__` method should initilize the list to be empty.
-* Create a class that contains the name of each student as a node, the next student in the list and the previous student in the list. `__init__` method should initilize the student name with the next student and previous student set to `None`.
+* Create a subclass that contains the name of each student, the next student in the list and the previous student in the list as attributes of its `__init__` method. This method should initilize the student name with the next student and previous student set to `None`.
 * Create methods to insert a new student at the front, end or middle of the linked list. To add in the middle, consider asking the user a student name after which you wante to add the new student. `hint:` look at the Photo Viewer example
 * Create methods to remove a student at the front, end or middle of the linked list. To remove in the middle, consider asking the user for the student name you want to remove. You can use the methods to remove at the front or end within the method to remove at the middle of the list.
-* Create a method called `__iter()` that will allow you to iterate through the linked list and return the name of current student in the iteration. This method will allow you to use the 'for' loop within other methods. `hint:` look at the Photo Viewer example
+* Create a method called `__iter__` that will allow you to iterate through the linked list and return the name of current student in the iteration. This method will allow you to use the 'for' loop within other methods. `hint:` look at the Photo Viewer example
 * Create a method that will allow you to check if a student name is already in the linked list. If a student name is already in the list, it should return `True`; otherwise, it should return `False`.
-* Create a method called `__str__()` that return the string structure in which the linked list will be printed. `hint:` look at the Music Playlist Creator Software example in the queue section
+* Create a method called `__str__` that return the string structure in which the linked list will be printed. `hint:` look at the Music Playlist Creator Software example in the queue section
 * Create a menu that allows the user to select the different operations that can be performed with a linked list: add new student at the beginning or end of the list, add new student after an specific student in the list, remove student at any place from the list and print the enrollment student list. Add an option to exit the menu
 
 You can test your program with the following scenarios:
