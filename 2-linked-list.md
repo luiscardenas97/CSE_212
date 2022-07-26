@@ -76,10 +76,10 @@ if self.head is None:
 new_node.prev = self.tail 
 
 # Connect the "next" of the current tail to the new node
-self.head.prev = new_node
+self.tail.next = new_node
 
 # Update the tail to point to the new node
-self.head = new_node
+self.tail = new_node
 ```
 
 <br> 
