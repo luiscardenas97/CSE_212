@@ -172,7 +172,7 @@ In the example below, we will create a program that create a BST to allow a rest
 # Class that contains the Binary Search Tree
 class BST_Revenue:
     # Subclass that contains the information for each node. In this case, each node
-    # store the information of the weekly revenue and week number
+    # stores the information of the weekly revenue and week number
     class Biweekly_Revenue:
         def __init__(self, data, week):
             self.data = data            # Weekly revenue
@@ -194,52 +194,49 @@ class BST_Revenue:
     
     # Look for the right place where to insert the new node in the BST
     def _add_data(self, data, week, revenue):
-        # Check if new node revenue is lesser than the root node revenue
+        # Check if new node revenue is less than the current node revenue
         if data < revenue.data:
-            # If node to the left is empty, add new node there
+            # If node to the left of current node is empty, add new node there
             if revenue.lesser is None:
                 revenue.lesser = BST_Revenue.Biweekly_Revenue(data, week)
             # Otherwise, use recursion to keep looking for where to add new node
             else:
                 self._add_data(data, week, revenue.lesser)
         
-        # Check if new node revenue is greater than the root node revenue
+        # Check if new node revenue is greater than the current node revenue
         elif data >= revenue.data:
-            # If node to the right is empty, add new node there
+            # If node to the right of current node is empty, add new node there
             if revenue.greater is None:
                 revenue.greater = BST_Revenue.Biweekly_Revenue(data, week)
             # Otherwise, use recursion to keep looking for where to add new node
             else: 
                 self._add_data(data, week, revenue.greater)   
 
-    # Iterator function that will be called each time a for loop is performed
+    # Iterator function that will be called each time a 'for' loop is performed
     def __iter__(self):
         yield from self._traverse_forward(self.initial)
 
-    # Allow to traverse forward the BST and return the values of each node from
-    # lowest revenue to highest revenue
+    # Allow to traverse forward the BST and return the values of each node from lowest revenue to highest revenue
     def _traverse_forward(self, revenue):
-        # If root node is not empty, use recursion to return node information
+        # If current node is not empty, use recursion to return node information
         if revenue is not None:
             yield from self._traverse_forward(revenue.lesser)
             yield [revenue.data, revenue.week]
             yield from self._traverse_forward(revenue.greater)  
     
-    # Perform a backward traversal. It gets called when the method _traverse_backward
-    # is called.
+    # Perform a backward traversal. It gets called when the method _traverse_backward is called.
     def __reversed__(self):
         yield from self._traverse_backward(self.initial)
 
-    # Allow to traverse backward the BST and return the values of each node from
-    # highest revenue to lowest revenue
+    # Allow to traverse backward the BST and return the values of each node from the highest revenue to the lowest revenue
     def _traverse_backward(self, revenue):
-        # If root node is not empty, use recursion to return node information
+        # If current node is not empty, use recursion to return node information
         if revenue is not None:
             yield from self._traverse_backward(revenue.greater)
             yield [revenue.data, revenue.week]
             yield from self._traverse_backward(revenue.lesser) 
 
-    # Determine the sum of the heights of all the subtrees
+    # Determine the sum of the heights of all the subtrees. Total amount of weeks.
     def get_amount_of_weeks(self):
         # If root node is empty, return zero
         if self.initial is None:

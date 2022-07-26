@@ -1,7 +1,7 @@
 # Class that contains the Binary Search Tree
 class BST_Revenue:
     # Subclass that contains the information for each node. In this case, each node
-    # store the information of the weekly revenue and week number
+    # stores the information of the weekly revenue and week number
     class Biweekly_Revenue:
         def __init__(self, data, week):
             self.data = data            # Weekly revenue
@@ -23,7 +23,7 @@ class BST_Revenue:
     
     # Look for the right place where to insert the new node in the BST
     def _add_data(self, data, week, revenue):
-        # Check if new node revenue is lesser than the root node revenue
+        # Check if new node revenue is less than the root node revenue
         if data < revenue.data:
             # If node to the left is empty, add new node there
             if revenue.lesser is None:
